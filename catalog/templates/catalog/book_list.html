@@ -6,8 +6,11 @@
 {% if book_list %}
 <ul>
     {% for book in book_list %}
-    <li>
+    <li class="book-list">
         <a href="{{ book.get_absolute_url }}">{{ book.title }}</a> ({{book.author}})
+        --
+        <a class="btn btn-primary" href="{% url 'book_update' book.pk %}">Update</a>
+        <a class="btn btn-danger" href="{% url 'book_delete' book.pk %}">Delete</a>
     </li>
     {% endfor %}
 </ul>

@@ -3,3 +3,9 @@
     padding: 0;
     list-style: none;
 }
+
+.author-list,
+.book-list{
+    padding:6px;
+   
+}

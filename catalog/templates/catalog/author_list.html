@@ -8,10 +8,13 @@
 <ul>
 
     {% for author in author_list %}
-    <li>
+    <li class="author-list">
         <a href="{{ author.get_absolute_url }}">
             {{ author }} ({{author.date_of_birth}} - {% if author.date_of_death %}{{author.date_of_death}}{% endif %})
         </a>
+        -
+        <a class="btn btn-primary" href="{% url 'author_update' author.pk %}">Update</a>
+        <a class="btn btn-danger" href="{% url 'author_delete' author.pk %}">Delete</a>
     </li>
     {% endfor %}
 
