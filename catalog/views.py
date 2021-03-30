@@ -144,7 +144,7 @@ def renew_book_librarian(request, pk):
     return render(request, 'catalog/book_renew_librarian.html', {'form': form, 'bookinst': book_inst})
 
 
-class AuthorCreate(CreateView):
+class AuthorCreate(CreateView):  # ESTE CLASS ESTA LIGADO AL TEMPLATE author_form.html
     model = Author
     fields = '__all__'
     permission_required = 'catalog.can_mark_returned'
@@ -162,6 +162,7 @@ class AuthorDelete(DeleteView):
     permission_required = 'catalog.can_mark_returned'
 
 
+# ESTE CLASS ESTA LIGADO AL TEMPLATE book_form.html
 class BookCreate(CreateView):
     model = Book
     fields = '__all__'
