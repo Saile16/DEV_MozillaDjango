@@ -9,3 +9,15 @@
     padding:6px;
    
 }
+.sidebar-dev{
+    background-color:#a68cce;
+    height:100vh;
+    color:black;
+}
+
+.sidebar-nav li a{
+    color:white;
+}
+.sidebar-nav li a:hover{
+    color:black;
+}
